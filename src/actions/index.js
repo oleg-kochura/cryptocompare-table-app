@@ -25,9 +25,7 @@ export const fetchCurrencies = () => {
 		
 		fetchData()
 			.then( response => {
-				return transformData(response.data.Data);
-			})
-			.then(data => {
+				const data = transformData(response.data.Data);
 				return fetchCost(data);
 			})
 			.then(data => dispatch(onCurrenciesFulfilled(data)))
