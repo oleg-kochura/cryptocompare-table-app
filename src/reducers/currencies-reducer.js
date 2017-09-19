@@ -7,7 +7,7 @@ import {
 const initialState = {
 	fetching: false,
 	fetched: false,
-	items: [],
+	items: {},
 	error: null
 };
 
